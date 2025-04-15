@@ -1,7 +1,34 @@
 #!/bin/bash
 
+if [[ "$1" == "--help" || "$1" == "-h" ]]; then
+    echo ""
+    echo "OpenX Reporting API Bash Client"
+    echo "--------------------------------"
+    echo "This script authenticates with the OpenX Reporting API using OAuth2 ,"
+    echo "generates a report, waits until it's ready, and downloads it as CSV."
+    echo ""
+    echo "Usage:"
+    echo "  ./reporting_api_report.sh"
+    echo ""
+    echo "Configuration:"
+    echo "  Edit the script and replace the following placeholders with your credentials:"
+    echo "    CLIENT_ID           -> Your OpenX OAuth2 client ID"
+    echo "    EMAIL               -> Your OpenX login email"
+    echo "    PASSWORD            -> Your OpenX login password"
+    echo "    INSTANCE_HOSTNAME   -> Your OpenX instance hostname "
+    echo ""
+    echo "Dependencies:"
+    echo "  - curl"
+    echo "  - jq"
+    echo "  - openssl"
+    echo ""
+    echo "Output:"
+    echo "  A file named report.csv containing the downloaded report."
+    exit 0
+fi
+
 # ---- CONFIG ----
-CLIENT_ID="<client_id"
+CLIENT_ID="<client_id>"
 EMAIL="<email>"
 PASSWORD="<password>"
 INSTANCE_HOSTNAME="<instance_hostname>"
