@@ -19,7 +19,7 @@ class AuthClient:
         self.authorize_url = "https://api.openx.com/oauth2/v1/authorize"
         self.session_info_url = f"https://api.openx.com/oauth2/v1/login/session-info"
         self.consent_url = "https://api.openx.com/oauth2/v1/login/consent"
-        self.redirect_url = "https://unity.openx.com/response-oidc"
+        self.redirect_url = f"https://{instance_hostname}"
         self.token_cache = {}
 
     def get_token(self):
