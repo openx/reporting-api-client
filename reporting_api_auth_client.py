@@ -6,20 +6,20 @@ import requests
 import time
 
 class AuthClient:
-    def __init__(self, client_id, email, password, instance_hostname):
+    def __init__(self, client_id, email, password, hostname):
         self.sign_in_url = "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword/signin"
         self.login_url = "https://login.openx.com"
         self.gcip_key = "AIzaSyCLvqp5phL0yGo0uxIN-l7a58mPkV74hsw"
         self.client_id = client_id
         self.email = email
         self.password = password
-        self.instance_hostname = instance_hostname
+        self.instance_hostname = hostname
         self.code_verifier, self.code_challenge = self.generate_code_challenge()
         self.get_token_url = "https://api.openx.com/oauth2/v1/token"
         self.authorize_url = "https://api.openx.com/oauth2/v1/authorize"
         self.session_info_url = f"https://api.openx.com/oauth2/v1/login/session-info"
         self.consent_url = "https://api.openx.com/oauth2/v1/login/consent"
-        self.redirect_url = f"https://{instance_hostname}"
+        self.redirect_url = f"https://{hostname}"
         self.token_cache = {}
 
     def get_token(self):

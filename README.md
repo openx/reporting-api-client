@@ -35,7 +35,7 @@ client = AuthClient(
     client_id="YOUR_CLIENT_ID",
     email="YOUR_EMAIL",
     password="YOUR_PASSWORD",
-    instance_hostname="YOUR_INSTANCE_HOSTNAME"
+    hostname="YOUR_INSTANCE_HOSTNAME"
 )
 
 # Get an authentication token

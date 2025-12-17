@@ -54,7 +54,7 @@ if __name__ == "__main__":
             client_id="<client_id>",
             email="<email>",
             password="<password>",
-            instance_hostname="<hostname>",
+            hostname="<hostname>"
         )
         token = client.get_token()
         print(f"OAuth token obtained; {token}")
