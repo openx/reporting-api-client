@@ -5,8 +5,8 @@ from reporting_api_auth_client import AuthClient
 
 generate_report_parameters = {
     "reportType": "HOURLY",
-    "dateFrom": "2025-06-01T00:00:00Z",
-    "dateTo": "2025-06-01T01:00:00Z",
+    "dateFrom": "2025-12-01T00:00:00Z",
+    "dateTo": "2025-12-01T01:00:00Z",
     "dimensions": ["Hour", "PageDomain"],
     "metrics": ["AllRequests"]
 }
