@@ -36,7 +36,7 @@ INSTANCE_HOSTNAME="<instance_hostname>"
 # Note: The GCIP_KEY is a public key and can be found in the OpenX documentation.
 GCIP_KEY="AIzaSyCLvqp5phL0yGo0uxIN-l7a58mPkV74hsw"
 
-REDIRECT_URI="https://unity.openx.com/response-oidc"
+REDIRECT_URI="https://${INSTANCE_HOSTNAME}"
 AUTHORIZE_URL="https://api.openx.com/oauth2/v1/authorize"
 SESSION_INFO_URL="https://api.openx.com/oauth2/v1/login/session-info"
 CONSENT_URL="https://api.openx.com/oauth2/v1/login/consent"
