@@ -173,8 +173,8 @@ main() {
         "reportType": "HOURLY",
         "dateFrom": "2025-02-01T00:00:00Z",
         "dateTo": "2025-02-01T01:00:00Z",
-        "dimensions": ["hour", "pageDomain"],
-        "metrics": ["allRequests", "clicks"]
+        "dimensions": ["Hour", "PageDomain"],
+        "metrics": ["AllRequests", "Clicks"]
     }'
 
     report_response=$(curl -s -X POST "$REPORT_GENERATE_URL" \
